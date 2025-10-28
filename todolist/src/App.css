@@ -67,12 +67,6 @@ h2 {
   letter-spacing: -0.025em;
 }
 
-.subtitle {
-  color: var(--text-muted);
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
 /* Header Row */
 .header-row {
   display: flex;
