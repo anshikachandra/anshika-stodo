@@ -1,4 +1,7 @@
-Server
+Server/
 start.sh
-README.md
-.git
+VERCEL_DEPLOY.md
+todolist/
+.gitignore-frontend
+node_modules/
+dist/
