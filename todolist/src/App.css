@@ -1,0 +1,150 @@
+.home {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create_form input{
+  width: 300px;
+  padding: 10px;
+  border-bottom: 2px solid;
+  outline: none;
+}
+
+.create_form button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Todo list styles */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 420px;
+  max-width: calc(100% - 40px);
+  padding: 10px 14px;
+  margin: 8px 0;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.todo-task {
+  flex: 1;
+  color: #111827;
+  font-size: 16px;
+}
+.delete-btn {
+  background: #ef4444; /* red-500 */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.delete-btn:hover { opacity: 0.9 }
+
+/* Add responsiveness */
+@media (max-width: 480px) {
+  .create_form input { width: 200px }
+  .todo-item { width: 320px }
+}
+
+/* Enhanced styling */
+body { background: linear-gradient(180deg,#f3f4f6 0%, #ffffff 100%); font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial }
+.header-row {
+  display:flex; align-items:center; justify-content:space-between; width:100%; max-width:900px; margin: 18px 0
+}
+.meta { display:flex; gap:12px; align-items:center }
+.count { color:#374151; font-size:14px }
+.clear-btn { background:#6b7280; color:white; padding:6px 10px; border-radius:6px; border:none; cursor:pointer }
+.clear-btn:hover{ opacity:0.95 }
+.todo-item.completed { opacity:0.7; text-decoration: line-through }
+.actions { display:flex; gap:8px; }
+.edit-btn, .save-btn, .cancel-btn { background:#0ea5e9; color:#fff; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; font-size:13px }
+.cancel-btn { background:#9ca3af }
+.save-btn { background:#10b981 }
+.edit-input { flex:1; padding:6px 8px; border-radius:6px; border:1px solid #e5e7eb }
+
+/* container centering */
+.app-container { display:flex; justify-content:center; padding:28px }
+.app-card { width:100%; max-width:900px; background: linear-gradient(180deg,#ffffff,#f8fafc); padding:20px; border-radius:12px; box-shadow:0 6px 20px rgba(15,23,42,0.06) }
+
+/* small utility */
+.todo-item input[type="checkbox"]{ width:18px; height:18px }
+
+:root{
+  /* Black & White (B&W) theme — white background, high-contrast text */
+  --bg: #ffffff; /* page background */
+  --card: #ffffff; /* card background */
+  --muted: #6b7280; /* muted gray for secondary text */
+  --accent: #000000; /* black accent */
+  --success: #10b981; /* kept green for save where useful */
+  --danger: #ef4444; /* red for destructive actions */
+  --text: #111827; /* dark text */
+  --radius:12px;
+}
+
+/* App container and card (B&W) */
+.app-container{display:flex;justify-content:center;padding:36px 16px;background:#f3f4f6;min-height:100vh}
+.app-card{width:100%;max-width:640px;background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(15,23,42,0.06);border:1px solid rgba(15,23,42,0.06)}
+
+h2{color:var(--text);font-size:20px;margin:0 0 6px}
+
+/* Create form (light) */
+.create_form{display:flex;gap:12px;align-items:center;margin:12px 0 18px}
+.create_form input[type='text']{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);background:transparent;color:var(--text);font-size:15px;box-shadow:none;transition:box-shadow .12s, border-color .12s}
+.create_form input[type='text']:focus{outline:none;border-color:rgba(15,23,42,0.12);box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+.create_form button{padding:8px 12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);background:var(--accent);color:#fff;cursor:pointer;font-weight:600;transition:transform .08s ease,opacity .08s}
+.create_form button:hover{transform:translateY(-1px);opacity:0.98}
+.create_form select{padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);background:transparent;color:var(--text)}
+
+/* Todo item visual polish (light cards) */
+.todo-item{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;margin:8px 0;border-radius:8px;background:var(--card);border:1px solid rgba(15,23,42,0.06);transition:transform .12s ease,box-shadow .12s ease,opacity .12s}
+.todo-item:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.todo-task{font-size:14px;color:var(--text)}
+.todo-item.completed .todo-task{color:var(--muted);text-decoration:line-through}
+.delete-btn{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--danger);padding:6px 10px;border-radius:6px}
+.delete-btn:hover{filter:brightness(0.98);color:#b91c1c}
+
+.priority-badge{font-size:11px;padding:6px 8px;border-radius:999px;color:var(--accent);font-weight:700;margin-left:8px;border:1px solid rgba(15,23,42,0.06)}
+.priority-high{background:#000;color:#fff}
+.priority-medium{background:#e5e7eb;color:#111827}
+.priority-low{background:#f3f4f6;color:#111827}
+
+/* small controls */
+.actions button{padding:8px 10px;font-size:13px}
+
+/* Icon styles */
+.icon{width:16px;height:16px;display:inline-block;vertical-align:middle;margin-right:8px}
+
+/* Fade-in for new items */
+.todo-item{animation:fadeIn .18s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* responsive */
+@media (max-width:640px){
+  .app-card{padding:16px}
+  .create_form{flex-direction:column;align-items:stretch}
+  .create_form button{width:100%}
+}
+
+/* subtle transitions for list changes */
+.todo-item{opacity:1}
+.todo-item.removing{opacity:0;transform:translateY(-6px);transition:opacity .18s ease, transform .18s ease}
+
+/* focus styles for accessibility */
+.edit-input:focus,.create_form input:focus,.create_form button:focus,.edit-btn:focus{outline:2px solid rgba(14,165,233,0.15);outline-offset:2px}
+
+/* Modal styles */
+.modal-overlay{position:fixed;inset:0;background:rgba(2,6,23,0.35);display:flex;align-items:center;justify-content:center;z-index:60}
+.modal-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 12px 40px rgba(2,6,23,0.18);max-width:520px;width:90%;border:1px solid rgba(2,6,23,0.04)}
+.modal-card h3{margin:0 0 8px;color:var(--text)}
+.modal-message{color:var(--muted);margin-bottom:14px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end}
+.modal-cancel{background:#e6e9ee;border:none;padding:8px 10px;border-radius:8px;cursor:pointer}
+.modal-confirm{background:var(--danger);color:white;border:none;padding:8px 10px;border-radius:8px;cursor:pointer}

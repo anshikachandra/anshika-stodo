@@ -1,0 +1,17 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd todolist && npm run dev",
+    "client": "cd todolist && npm run dev",
+    "server": "cd Server && npm run start",
+    "start": "cd Server && npm run start",
+    "build-and-start": "cd todolist && npm run build && cd .. && NODE_ENV=production node Server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
