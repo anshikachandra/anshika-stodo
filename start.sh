@@ -9,9 +9,12 @@ echo "Cleaning up old processes..."
 lsof -ti:3001,5173,5174 2>/dev/null | xargs kill -9 2>/dev/null
 sleep 1
 
+# Get the script directory
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Start backend
 echo "Starting backend (MongoDB + Express) on port 3001..."
-cd Server && npm start > /tmp/backend.log 2>&1 &
+cd "$SCRIPT_DIR/Server" && npm start > /tmp/backend.log 2>&1 &
 BACKEND_PID=$!
 
 # Wait for backend to start
@@ -19,7 +22,7 @@ sleep 2
 
 # Start frontend
 echo "Starting frontend (Vite) on port 5173..."
-cd ../todolist && npm run dev > /tmp/frontend.log 2>&1 &
+cd "$SCRIPT_DIR/todolist" && npm run dev > /tmp/frontend.log 2>&1 &
 FRONTEND_PID=$!
 
 # Wait for frontend to start
