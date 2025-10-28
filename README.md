@@ -1,34 +1,37 @@
-# Todolist (local dev)
+# Todo List Application
 
-This repository contains a simple Todo app with a Vite + React frontend (`/todolist`) and an Express server (`/Server`). The server can use MongoDB when `MONGO_URI` is provided in `/Server/.env`; otherwise it uses an in-memory store.
+A professional todo list application with React frontend and Express backend.
 
-Quick commands (copy/paste into your terminal):
+## 🚀 Quick Start
 
-1) Open the project root (this folder):
+### Important URLs:
+- **Todo App (Frontend)**: http://localhost:5173
+- **Backend API**: http://localhost:3001
 
+⚠️ **Note**: Always access the app at http://localhost:5173 (NOT port 3001)
+- Port 3001 is for the backend API only
+- If you see "Cannot GET", make sure you're accessing http://localhost:5173
+
+### Start the Application:
+
+**Option 1: Use the start script (Recommended)**
 ```bash
 cd /home/admin-090/Desktop/Todolist
+./start.sh
 ```
 
-2) Start the frontend (Vite) from the repo root:
-
+**Option 2: Manual start**
 ```bash
-# run the client dev server
+# Terminal 1 - Backend
+cd /home/admin-090/Desktop/Todolist/Server
+npm start
+
+# Terminal 2 - Frontend
+cd /home/admin-090/Desktop/Todolist/todolist
 npm run dev
 ```
 
-This runs `cd todolist && npm run dev` (Vite). The dev URL is typically http://localhost:5173
-
-3) Start the server (Express):
-
-```bash
-# from repo root
-npm start
-
-# or directly in the Server folder
-cd Server
-node index.js
-```
+Then open your browser to: **http://localhost:5173**
 
 The server listens on http://localhost:3001. If you have MongoDB and want persistence, create `Server/.env` with:
 
