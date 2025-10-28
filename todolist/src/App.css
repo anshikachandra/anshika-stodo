@@ -176,9 +176,9 @@ h2 {
 .todo-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
-  padding: 12px 14px;
+  padding: 10px 12px;
   margin: 8px 0;
   background: white;
   border: 1.5px solid var(--border);
@@ -192,8 +192,8 @@ h2 {
 }
 
 .todo-item input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   accent-color: var(--success);
   flex-shrink: 0;
@@ -202,7 +202,7 @@ h2 {
 .todo-task {
   flex: 1;
   color: var(--text);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -219,8 +219,8 @@ h2 {
 
 /* Priority Badges */
 .priority-badge {
-  font-size: 10px;
-  padding: 4px 8px;
+  font-size: 9px;
+  padding: 3px 7px;
   border-radius: 6px;
   font-weight: 700;
   text-transform: uppercase;
@@ -250,11 +250,11 @@ h2 {
 }
 
 .edit-btn, .save-btn, .cancel-btn, .delete-btn {
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   transition: background-color 0.15s ease;
   flex-shrink: 0;
