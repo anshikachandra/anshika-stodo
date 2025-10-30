@@ -1,7 +1,0 @@
-Server/
-start.sh
-VERCEL_DEPLOY.md
-todolist/
-.gitignore-frontend
-node_modules/
-dist/
