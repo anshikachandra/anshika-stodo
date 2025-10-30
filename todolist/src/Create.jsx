@@ -5,13 +5,13 @@ function Create() {
   const [task, setTask] = useState('')
   const [priority, setPriority] = useState('medium')
   const [loading, setLoading] = useState(false)
-  const apiBase = `${window.location.protocol}//${window.location.hostname}:3001`
-  
+  // const apiBase = `${window.location.protocol}//${window.location.hostname}:3001` || "https://anshikastodobackend-1.onrender.com"
+  const apiBase = "https://anshikastodobackend-1.onrender.com"
   const handleAdd = async () => {
     if (!task || !task.trim()) return
     setLoading(true)
     try {
-      await axios.post(`${apiBase}/add`, { task: task.trim(), priority })
+      await axios.post(`${apiBase}/add`, { task: task.trim(), priority }) 
       window.dispatchEvent(new Event('todo:added'))
       setTask('')
     } catch (err) {

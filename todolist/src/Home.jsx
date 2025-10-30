@@ -9,8 +9,8 @@ function Home() {
     const [editText, setEditText] = useState('')
     const [editPriority, setEditPriority] = useState('medium')
     const [modal, setModal] = useState({ open: false })
-    const apiBase = `${window.location.protocol}//${window.location.hostname}:3001`
-    
+    // const apiBase = `${window.location.protocol}//${window.location.hostname}:3001` || "https://anshikastodobackend-1.onrender.com"
+    const apiBase = "https://anshikastodobackend-1.onrender.com"
     useEffect(() => {
         let mounted = true
         const fetchTodos = () => {
